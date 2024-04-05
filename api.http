@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": "Novo Evento 2",
+  "details": null,
+  "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/eac2edc7-5972-435b-b711-51bfc250b825/attendees
+Content-Type: application/json
+
+{
+  "name": "Rafael Perini",
+  "email": "rafa1999perini@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/eac2edc7-5972-435b-b711-51bfc250b825
+
+###
+
+GET http://localhost:3333/attendees/1/badge
+
+###
+
+GET http://localhost:3333/attendees/3/check-in
+
+###
+
+GET http://localhost:3333/events/eac2edc7-5972-435b-b711-51bfc250b825/attendees?query=rafael
